@@ -1,6 +1,6 @@
 # import files
 from flask import Flask, render_template, request
-from bot_model import generate_answer
+from chat import generate_response
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def home():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')
-    return str(generate_answer(userText))
+    return str(generate_response(userText))
 
 
 if __name__ == "__main__":
