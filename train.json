@@ -1,6 +1,6 @@
 {"intents": [
     {"tag": "greeting",
-     "patterns": ["Hi", "Hey", "Is anyone there?","Hi there", "Hello", "Hey there", "Howdy", "Hola", "Bonjour", "Konnichiwa", "Guten tag", "Ola"],
+     "patterns": ["Hi", "Hey", "Is anyone there?","Hi there", "Hello", "Hey there"],
      "responses": ["Hello there. Tell me how are you feeling today?", "Hi there. What brings you here today?", "Hi there. How are you feeling today?", "Great to see you. How do you feel currently?", "Hello there. Glad to see you're back. What's going on in your world right now?"]
     },
     {"tag": "morning",
@@ -20,7 +20,7 @@
         "responses": ["Good night. Get some proper sleep", "Good night. Sweet dreams."]
     },
     {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye", "Au revoir", "Sayonara", "ok bye", "Bye then", "Fare thee well"],
+     "patterns": ["Bye", "See you later", "Goodbye", "ok bye", "Bye then"],
      "responses": ["See you later.", "Have a nice day.", "Bye! Come back again.", "I'll see you soon."]
     },
     {"tag": "thanks",
@@ -29,26 +29,38 @@
     },
     {"tag": "no-response",
         "patterns": [""],
-        "responses": ["Sorry, I didn't understand you.", "Please go on.", "Not sure I understand that.", "Please don't hesitate to talk to me."]
+        "responses": ["Sorry, I didn't understand you.", "Please go on.", "Please don't hesitate to talk to me."]
     },
     {"tag": "neutral-response",
         "patterns": ["nothing much"],
         "responses": ["Oh I see. Do you want to talk about something?"]
     },
+    {"tag": "bot-name",
+     "patterns": ["Who are you?", "What are you?", "Who you are?", "What is your name?", "What should I call you?"],
+     "responses": ["I'm WellnessWhisper, a chatbot."]
+    },
     {"tag": "about",
-     "patterns": ["Who are you?", "What are you?", "Who you are?", "Tell me more about yourself.", "What is your name?", "What should I call you?", "What's your name?", "Tell me about yourself" ],
-     "responses": ["I'm Pandora, your Personal Therapeutic AI Assistant. How are you feeling today", "I'm Pandora, a Therapeutic AI Assitant designed to assist you. Tell me about yourself.", "I'm Pandora. I am a conversational agent designed to mimic a therapist. So how are you feeling today?", "You can call me Pandora.", "I'm Pandora!", "Call me Pandora"]
+     "patterns": ["Tell me more about yourself.", "Tell me about yourself" ],
+     "responses": ["I'm your Personal Therapeutic AI Assistant designed to assist you. Tell me about yourself."]
     },
     {"tag": "skill",
-        "patterns": ["What can you do?"],
-        "responses": ["I can provide general advice regarding anxiety and depression, answer questions related to mental health and make daily conversations. Do not consider me as a subsitute for an actual mental healthcare worker. Please seek help if you don't feel satisfied with me."]
+        "patterns": ["What can you do?", "What can you do for me?", "How can you help me?"],
+        "responses": ["I can provide general advice regarding anxiety and depression, answer questions related to mental health and make daily conversations. Do not consider me as a subsitute for an actual mental healthcare worker."]
     },
-    {"tag": "creation",
-        "patterns": ["Who created you?", "How were you made?", "How were you created?"],
-        "responses": ["I was created by >.", "I was trained on a text dataset using Deep Learning & Natural Language Processing techniques", "The real question is: Who created you?"]
+    {"tag": "who-creation",
+        "patterns": ["Who created you?", "By whom were you created?", "Who made you?"],
+        "responses": ["I was created as a minor project by JIIT students."]
+    },
+    {"tag": "how-creation",
+        "patterns": ["How were you made?", "How were you created?"],
+        "responses": ["I was trained on a text dataset using Deep Learning & Natural Language Processing techniques"]
     },
     {"tag": "name",
-        "patterns": ["My name is ", "I am name.", "I go by "],
+        "patterns": ["My name is "],
+        "responses": ["Oh nice to meet you. Tell me how was your week?", "Nice to meet you. So tell me. How do you feel today?", "That's a great name. Tell me more about yourself."]
+    },
+    {"tag": "age",
+        "patterns": ["My age is ", "I am "],
         "responses": ["Oh nice to meet you. Tell me how was your week?", "Nice to meet you. So tell me. How do you feel today?", "That's a great name. Tell me more about yourself."]
     },
     {"tag": "help",
