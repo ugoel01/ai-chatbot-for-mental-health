@@ -46,4 +46,4 @@ def generate_response(msg):
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
 
-    return "I do not understand..."
+    return "I do not understand. Currently I am not trained to that level."
